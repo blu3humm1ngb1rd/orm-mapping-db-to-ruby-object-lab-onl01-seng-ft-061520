@@ -84,7 +84,7 @@ class Student
       FROM students
       WHERE students.grade = 10 
     SQL
-    DB[:conn].execute(sql).number.times do |row|
+    DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end 
   end 
