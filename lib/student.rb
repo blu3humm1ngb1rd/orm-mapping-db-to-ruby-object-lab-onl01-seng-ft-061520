@@ -22,6 +22,7 @@ class Student
       SELECT * 
       FROM students
       WHERE name = ?
+      LIMIT 1
     SQL
   end
   
