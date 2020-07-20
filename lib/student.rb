@@ -104,6 +104,7 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
+      WHERE students.grade = grade 
     SQL
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
